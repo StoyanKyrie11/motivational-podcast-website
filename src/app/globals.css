@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modify the tailwind.config.js to include those colors, think about colors for the buttons, nav, footer, forms, subscription pop-up + add Tailwind presets for customizations of the colors and themes
+ */
+
+@layer base {
+  body {
+    @apply bg-light-mode-bg-color dark:bg-dark-mode-bg-color;
+  }
+}
