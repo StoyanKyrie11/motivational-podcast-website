@@ -1,19 +1,23 @@
 "use client";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import Head from "next/head";
+import { lazy } from "react";
+
+const Footer = lazy(() => import("@src/components/Footer"));
+const Hero = lazy(() => import("@src/components/Hero"));
+const Header = lazy(() => import("@src/components/Header"));
+const Navbar = lazy(() => import("@src/components/Navbar"));
+const AboutComponent = lazy(() => import("@src/components/AboutComponent"));
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <Navbar />
-      <Hero />
-      <Footer />
-      {/*    <section className="flex flex-col items-center justify-center p-24"></section> */}
-    </div>
+    <body className="w-full h-full">
+      <article className="grid grid-rows-3 min-h-full">
+        <Header />
+        <AboutComponent />
+        <Navbar />
+        <Hero />
+        <Footer />
+      </article>
+    </body>
   );
 }

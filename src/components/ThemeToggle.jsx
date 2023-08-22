@@ -1,15 +1,14 @@
 "use client";
 
-import * as React from "react";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
+import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+} from "./ui/dropdown-menu";
 
 const ThemeToggle = () => {
   const { setTheme } = useTheme();
@@ -18,8 +17,7 @@ const ThemeToggle = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          className="dark:bg-dark-mode-bg-color focus: bg-light-mode-bg-color "
-          variant="outline"
+          className="dark:bg-dark-mode-bg-color focus: bg-light-mode-bg-color border-2"
           size="icon"
         >
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 " />
